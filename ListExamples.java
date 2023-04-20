@@ -3,7 +3,14 @@ import java.util.List;
 
 interface StringChecker { boolean checkString(String s); }
 
-class ListExamples {
+class ListExamples implements StringChecker {
+
+  public boolean checkString(String s) {
+    if (s.length() < 5) {
+      return true;
+    }
+    return false; 
+  }
 
   // Returns a new list that has all the elements of the input list for which
   // the StringChecker returns true, and not the elements that return false, in
