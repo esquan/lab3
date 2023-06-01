@@ -5,7 +5,7 @@ class StringHandler implements URLHandler {
     String outputted = "";
 
     public String handleRequest(URI url) {
-        if (url.getPath().contains("/add")) {
+        if (url.getPath().contains("/add-message")) {
             String[] param = url.getQuery().split("=");
             outputted += param[1] + "\n";
 
